@@ -1,0 +1,340 @@
+/* SWE 642 - Assignment 1 Part 2 */
+/* custom styles on top of bootstrap, using GMU green + gold */
+
+:root {
+  --gmu-green: #006633;
+  --gmu-green-dark: #004d26;
+  --gmu-green-soft: #eaf5ef;
+  --gmu-gold: #FFCC33;
+  --page-gray: #f2f4f3;
+  --ink: #1d2a23;
+  --muted: #5f6b65;
+  --line: #dfe5e1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* light gray page background */
+body {
+  background-color: var(--page-gray);
+  font-family: "Montserrat", system-ui, sans-serif;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* required rule: h1 in GMU green */
+h1 {
+  color: #006633;
+  font-weight: 800;
+}
+
+/* small gold bar above section titles */
+h2 {
+  color: var(--gmu-green-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--gmu-gold);
+  margin-bottom: 0.65rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gmu-green);
+  scroll-margin-top: 90px;
+}
+
+/* heading box at the top of each page */
+.page-header-box {
+  border: 5px solid #006633;
+  border-radius: 12px;
+  box-shadow: 0 24px 48px -18px rgba(0, 102, 51, 0.45);
+  background: radial-gradient(circle at 100% 0%, rgba(255, 204, 51, 0.28), transparent 45%), #fff;
+  padding: 2.5rem 1.5rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.page-header-box h1 {
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.page-header-box .subtitle {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  background-color: var(--gmu-green-soft);
+  color: var(--gmu-green);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+}
+
+/* custom class - works on any element to call it out */
+.gmu-highlight {
+  background: linear-gradient(135deg, #fff8e1, #fffdf5);
+  border: 1px solid #f5e3a8;
+  border-left: 6px solid var(--gmu-gold);
+  padding: 1.1rem 1.4rem;
+  border-radius: 14px;
+}
+
+/* utility classes for the school colors */
+.bg-gmu-green {
+  background-color: var(--gmu-green) !important;
+}
+
+.text-gmu-gold {
+  color: var(--gmu-gold) !important;
+}
+
+/* green/gold button */
+.gmu-btn {
+  background-color: var(--gmu-green);
+  color: var(--gmu-gold);
+  border: 2px solid var(--gmu-green);
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  box-shadow: 0 8px 18px -8px rgba(0, 102, 51, 0.7);
+  transition: all 0.2s ease;
+}
+
+.gmu-btn:hover,
+.gmu-btn:focus {
+  background-color: var(--gmu-gold);
+  color: var(--gmu-green);
+  border-color: var(--gmu-gold);
+  transform: translateY(-2px);
+}
+
+/* navbar */
+.navbar {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.4rem 0.95rem !important;
+  transition: background-color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--gmu-gold);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* white content cards */
+.content-card {
+  --bs-card-border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 12px 28px -12px rgba(16, 24, 40, 0.12);
+}
+
+/* degree list with green bullets */
+.degree-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.degree-list li {
+  padding: 0.4rem 0;
+  font-size: 1.05rem;
+}
+
+.degree-list li::marker {
+  color: var(--gmu-green);
+  font-size: 1.2em;
+}
+
+.degree-list a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--gmu-gold);
+  transition: color 0.2s ease;
+}
+
+.degree-list a:hover {
+  color: var(--gmu-green);
+}
+
+/* course tables */
+.table-responsive {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.course-table {
+  --bs-table-striped-bg: #f5f9f7;
+  --bs-table-hover-bg: #fff6d6;
+  margin-bottom: 0;
+}
+
+.course-table thead th {
+  background-color: var(--gmu-green);
+  color: var(--gmu-gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.8rem 1rem;
+}
+
+.course-table td {
+  padding: 0.75rem 1rem;
+  border-color: var(--line);
+}
+
+.course-table td:first-child {
+  font-weight: 600;
+  color: var(--gmu-green-dark);
+  white-space: nowrap;
+  width: 30%;
+}
+
+/* survey form */
+
+/* asterisk on required labels */
+.required::after {
+  content: " *";
+  color: #d92d20;
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-control,
+.form-select {
+  padding: 0.7rem 0.95rem;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background-color: #fbfcfb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #fff;
+  border-color: var(--gmu-green);
+  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.15);
+}
+
+/* only show red after the user has touched the field */
+.form-control:user-invalid,
+.form-select:user-invalid {
+  border-color: #d92d20;
+}
+
+fieldset legend {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* checkboxes and radios as clickable tiles */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.option-grid .form-check {
+  position: relative;
+  margin: 0;
+  padding: 0.7rem 0.9rem 0.7rem 2.6rem;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.option-grid .form-check-input {
+  margin-left: -1.7rem;
+}
+
+/* makes the whole tile click the label */
+.option-grid .form-check-label::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.option-grid .form-check:hover {
+  border-color: #9cc9b0;
+}
+
+.option-grid .form-check:has(.form-check-input:checked) {
+  border-color: var(--gmu-green);
+  background-color: var(--gmu-green-soft);
+}
+
+.form-check-input:checked {
+  background-color: var(--gmu-green);
+  border-color: var(--gmu-green);
+}
+
+.form-check-input:focus {
+  border-color: var(--gmu-green);
+  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.15);
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+form .btn {
+  border-radius: 999px;
+}
+
+@media (max-width: 575.98px) {
+  .option-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* footer */
+.site-footer {
+  border-top: 4px solid var(--gmu-gold);
+}
+
+.site-footer a {
+  color: var(--gmu-gold);
+}

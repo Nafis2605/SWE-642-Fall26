@@ -1,0 +1,111 @@
+/*
+Author: Fahim Arsad Nafis
+Link: https://www.linkedin.com/in/fahim-arsad/
+SWE 642 - Assignment 2
+*/
+
+:root {
+  --gmu-green: #006633;
+  --gmu-gold: #FFCC33;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  color: #006633;
+}
+
+h2 {
+  color: var(--gmu-green);
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--gmu-gold);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--gmu-green);
+  font-size: 1.2rem;
+  scroll-margin-top: 70px;
+}
+
+/* box around the page heading */
+.page-header-box {
+  background-color: #fff;
+  border: 5px solid #006633;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.gmu-highlight {
+  background-color: #fff8e1;
+  border-left: 4px solid var(--gmu-gold);
+  padding: 0.75rem 1rem;
+}
+
+.bg-gmu-green {
+  background-color: var(--gmu-green) !important;
+}
+
+.text-gmu-gold {
+  color: var(--gmu-gold) !important;
+}
+
+.gmu-btn {
+  background-color: var(--gmu-green);
+  color: #fff;
+}
+
+.gmu-btn:hover {
+  background-color: #004d26;
+  color: var(--gmu-gold);
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--gmu-gold);
+}
+
+.course-table thead th {
+  background-color: var(--gmu-green);
+  color: #fff;
+}
+
+.required::after {
+  content: " *";
+  color: red;
+}
+
+legend {
+  font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--gmu-green);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 51, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--gmu-green);
+  border-color: var(--gmu-green);
+}
+
+/* city, state, average and max are filled in by script.js */
+.readonly-box {
+  min-height: 38px;
+  background-color: #e9ecef;
+}
+
+.site-footer {
+  border-top: 4px solid var(--gmu-gold);
+}
+
+.site-footer a {
+  color: var(--gmu-gold);
+}
